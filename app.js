@@ -1,5 +1,5 @@
-const numbers = [1, 2, 3];
-console.log(numbers);
+// const numbers = [1, 2, 3];
+// console.log(numbers);
 
 // const moreNumbers = new Array(); // Empty array
 // console.log(moreNumbers);
@@ -23,27 +23,43 @@ console.log(numbers);
 // const moreNumbers = Array.from('Hii!');
 // console.log(moreNumbers); // ['H', 'i', 'i', '!']
 
-const listItems = document.querySelectorAll('li');
-console.log(listItems);
+// const listItems = document.querySelectorAll('li');
+// console.log(listItems);
 
-const arrayListItems = Array.from(listItems); // Array from method will convert array like object or iterable in to real array
-for (const li of arrayListItems) {
-  console.log(li.textContent);
-}
+// const arrayListItems = Array.from(listItems); // Array from method will convert array like object or iterable in to real array
+// for (const li of arrayListItems) {
+//   console.log(li.textContent);
+// }
 
-const hobbies = ['Playing Games', 'Coding'];
-const personalData = ['Nikhil', 27, { moreData: [] }];
+// const hobbies = ['Playing Games', 'Coding'];
+// const personalData = ['Nikhil', 27, { moreData: [] }];
 
-const analyticsData = [
-  [1.2, 5],
-  [3, 6],
-  [4, 8],
-];
+// const analyticsData = [
+//   [1.2, 5],
+//   [3, 6],
+//   [4, 8],
+// ];
 
-for (const data of analyticsData) {
-  for (const dataPoints of data) {
-    console.log(dataPoints);
-  }
-}
+// for (const data of analyticsData) {
+//   for (const dataPoints of data) {
+//     console.log(dataPoints);
+//   }
+// }
 
-console.log(personalData[1]);
+// console.log(personalData[1]);
+
+// * Push, Pop, Shift and Unshift Array Methods
+const skills = ['Dart', 'Flutter'];
+skills.push('Firebase'); // push at the end of the array and also returns the new array length after adding
+skills.unshift('HTML'); // add at the beginning of the array and it shifts the elements to the left side of the array and also returns the new array length after adding
+const poppedValue = skills.pop(); // remove the last element from the array and also returns the removed element
+console.log(poppedValue);
+const shiftedValue = skills.shift(); // shift the elements to the left side of the array and also returns the removed element
+console.log(shiftedValue);
+console.log(skills);
+
+console.log('-----------------------');
+
+// Direct manipulate using direct index access
+skills[1] = 'JavaScript';
+console.log(skills);
