@@ -151,18 +151,31 @@
 
 // forEach() method
 
-const prices = [20, 30, 40, 20];
-const tax = 18;
-const taxAdjustedPrices = [];
+// const prices = [20, 30, 40, 20];
+// const tax = 18;
+// const taxAdjustedPrices = [];
 
 // for (const price of prices) {
 //   taxAdjustedPrices.push(price * tax);
 // }
 
-prices.forEach((price, index, prices) => {
+// prices.forEach((price, index, prices) => {
+//   const priceObj = { index: index, taxAdjPrice: price * tax };
+//   taxAdjustedPrices.push(priceObj);
+// forEach is useful when you need an index and don't want manage the index by self in traditional for loop
+// });
+
+// console.log(taxAdjustedPrices);
+
+// map() method
+
+const prices = [20, 30, 40, 20];
+const tax = 18;
+
+const taxAdjustedPrices = prices.map((price, index, prices) => {
   const priceObj = { index: index, taxAdjPrice: price * tax };
-  taxAdjustedPrices.push(priceObj);
-  // forEach is useful when you need an index and don't want manage the index by self in traditional for loop
+  return priceObj;
+  // The JavaScript map() method is used to transform or modify the elements of an array by applying a provided function to each element. It then returns a new array containing the results of applying the function to each element of the original array.
 });
 
-console.log(taxAdjustedPrices);
+console.log(prices, taxAdjustedPrices);
