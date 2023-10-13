@@ -145,6 +145,24 @@
 // console.log(nikhilIndex);
 
 // includes() method
-const testResults = [1, 2, 6, 8.9, 23, 26, 23, 29];
-console.log(testResults.includes(23)); // check if elements exists or not
-console.log(testResults.indexOf(23) !== 1); // indexOf will return -1 if element is not found
+// const testResults = [1, 2, 6, 8.9, 23, 26, 23, 29];
+// console.log(testResults.includes(23)); // check if elements exists or not
+// console.log(testResults.indexOf(23) !== 1); // indexOf will return -1 if element is not found
+
+// forEach() method
+
+const prices = [20, 30, 40, 20];
+const tax = 18;
+const taxAdjustedPrices = [];
+
+// for (const price of prices) {
+//   taxAdjustedPrices.push(price * tax);
+// }
+
+prices.forEach((price, index, prices) => {
+  const priceObj = { index: index, taxAdjPrice: price * tax };
+  taxAdjustedPrices.push(priceObj);
+  // forEach is useful when you need an index and don't want manage the index by self in traditional for loop
+});
+
+console.log(taxAdjustedPrices);
