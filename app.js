@@ -122,24 +122,29 @@
 // console.log(persons.indexOf({ name: 'Nikhil' })); // indexOf will not work for reference objects because we are creating another object and if two objects are same it will still ignore this
 
 // find() and findIndex() method
-const persons = [{ name: 'Nikhil' }, { name: 'Akshay' }];
-const akshayIndex = persons.find((person, index, persons) => {
-  return person.name === 'Akshay';
-  // the find take a function with 3 parameters
-  // first is object. second is index and third is array
-  // the find method will return the same object which we are looking for and it works with same object
-});
+// const persons = [{ name: 'Nikhil' }, { name: 'Akshay' }];
+// const akshayIndex = persons.find((person, index, persons) => {
+//   return person.name === 'Akshay';
+// the find take a function with 3 parameters
+// first is object. second is index and third is array
+// the find method will return the same object which we are looking for and it works with same object
+// });
 
 // akshayIndex.name = 'Sanket'; // this will affect the existing person because of reference value concept
 
-console.log(akshayIndex);
-console.log(persons);
+// console.log(akshayIndex);
+// console.log(persons);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
-const nikhilIndex = persons.findIndex((person, index, persons) => {
-  return person.name === 'Nikhil';
-  // the findIndex will return the index of element we are looking for
-});
+// const nikhilIndex = persons.findIndex((person, index, persons) => {
+//   return person.name === 'Nikhil';
+// the findIndex will return the index of element we are looking for
+// });
 
-console.log(nikhilIndex);
+// console.log(nikhilIndex);
+
+// includes() method
+const testResults = [1, 2, 6, 8.9, 23, 26, 23, 29];
+console.log(testResults.includes(23)); // check if elements exists or not
+console.log(testResults.indexOf(23) !== 1); // indexOf will return -1 if element is not found
