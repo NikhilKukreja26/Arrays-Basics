@@ -63,3 +63,30 @@ console.log('-----------------------');
 // Direct manipulate using direct index access
 skills[1] = 'JavaScript';
 console.log(skills);
+
+console.log('-----------------------');
+
+// Splice method
+skills.splice(0, 0, 'Wordpress'); // it takes start index from where to start, second parameter delete count if we want to delete the items and last the elements we want to add as many as we can add it
+console.log(skills);
+
+console.log('-----------------------');
+
+skills.splice(3, 0, 'CSS'); // it will add the element at specified index
+console.log(skills);
+
+console.log('-----------------------');
+
+const removedElements = skills.splice(-2, 1); // it will start from end of the array delete the second last element
+console.log(removedElements);
+
+console.log('-----------------------');
+
+console.log(skills);
+
+console.log('-----------------------');
+
+skills.splice(0); // it will delete all the elements from and including starting index
+console.log(skills);
+
+console.log('-----------------------');
