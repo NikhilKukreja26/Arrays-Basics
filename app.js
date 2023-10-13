@@ -49,44 +49,58 @@
 // console.log(personalData[1]);
 
 // * Push, Pop, Shift and Unshift Array Methods
-const skills = ['Dart', 'Flutter'];
-skills.push('Firebase'); // push at the end of the array and also returns the new array length after adding
-skills.unshift('HTML'); // add at the beginning of the array and it shifts the elements to the left side of the array and also returns the new array length after adding
-const poppedValue = skills.pop(); // remove the last element from the array and also returns the removed element
-console.log(poppedValue);
-const shiftedValue = skills.shift(); // shift the elements to the left side of the array and also returns the removed element
-console.log(shiftedValue);
-console.log(skills);
+// const skills = ['Dart', 'Flutter'];
+// skills.push('Firebase'); // push at the end of the array and also returns the new array length after adding
+// skills.unshift('HTML'); // add at the beginning of the array and it shifts the elements to the left side of the array and also returns the new array length after adding
+// const poppedValue = skills.pop(); // remove the last element from the array and also returns the removed element
+// console.log(poppedValue);
+// const shiftedValue = skills.shift(); // shift the elements to the left side of the array and also returns the removed element
+// console.log(shiftedValue);
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
 // Direct manipulate using direct index access
-skills[1] = 'JavaScript';
-console.log(skills);
+// skills[1] = 'JavaScript';
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
 // Splice method
-skills.splice(0, 0, 'Wordpress'); // it takes start index from where to start, second parameter delete count if we want to delete the items and last the elements we want to add as many as we can add it
-console.log(skills);
+// skills.splice(0, 0, 'Wordpress'); // it takes start index from where to start, second parameter delete count if we want to delete the items and last the elements we want to add as many as we can add it
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
-skills.splice(3, 0, 'CSS'); // it will add the element at specified index
-console.log(skills);
+// skills.splice(3, 0, 'CSS'); // it will add the element at specified index
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
-const removedElements = skills.splice(-2, 1); // it will start from end of the array delete the second last element
-console.log(removedElements);
+// const removedElements = skills.splice(-2, 1); // it will start from end of the array delete the second last element
+// console.log(removedElements);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
-console.log(skills);
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
 
-skills.splice(0); // it will delete all the elements from and including starting index
-console.log(skills);
+// skills.splice(0); // it will delete all the elements from and including starting index
+// console.log(skills);
 
-console.log('-----------------------');
+// console.log('-----------------------');
+
+// Slice method
+const testResults = [1, 2, 6, 8.9, 23, 26, 29];
+
+// testResults.push(3); // this will affect to storedResults array because of reference objects
+
+// const storedResults = testResults.slice(0, 2); // slice method will create brand new array from copying old array it will start from zero and go to the specified index but excluding that specified index
+// const storedResults = testResults.slice(1, 2);
+// const storedResults = testResults.slice(3, 2); // will not because of reverse order
+// const storedResults = testResults.slice(-3, 2); // will not because both needs to be negatives
+const storedResults = testResults.slice(-3, -2); // this will select the elements from end of the array and go to specified index but excluding the specified index
+testResults.push(3); // this not affected the storedResults array
+
+console.log(storedResults, testResults);
