@@ -106,9 +106,17 @@
 // console.log(storedResults, testResults);
 
 // concat method
-const testResults = [1, 2, 6, 8.9, 23, 26, 29];
+// const testResults = [1, 2, 6, 8.9, 23, 26, 29];
 
-const storedResults = testResults.concat([24, 31]); // this will create brand new array and copies the existing array and it takes one or more array objects and this will not create nested array but it take the elements from arrays and it will add at the end of array
-testResults.push(3); // this not affected the storedResults array
+// const storedResults = testResults.concat([24, 31]); // this will create brand new array and copies the existing array and it takes one or more array objects and this will not create nested array but it take the elements from arrays and it will add at the end of array
+// testResults.push(3); // this not affected the storedResults array
 
-console.log(storedResults, testResults);
+// console.log(storedResults, testResults);
+
+// indexOf and lastIndexOf() method
+const testResults = [1, 2, 6, 8.9, 23, 26, 23, 29];
+console.log(testResults.indexOf(23)); // start from the left and will give the index of specified element which found first and it will ignore duplicates
+console.log(testResults.lastIndexOf(23)); // this will start from right
+
+const persons = [{ name: 'Nikhil' }, { name: 'Akshay' }];
+console.log(persons.indexOf({ name: 'Nikhil' })); // indexOf will not work for reference objects because we are creating another object and if two objects are same it will still ignore this
