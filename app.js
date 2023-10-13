@@ -92,7 +92,7 @@
 // console.log('-----------------------');
 
 // Slice method
-const testResults = [1, 2, 6, 8.9, 23, 26, 29];
+// const testResults = [1, 2, 6, 8.9, 23, 26, 29];
 
 // testResults.push(3); // this will affect to storedResults array because of reference objects
 
@@ -100,7 +100,15 @@ const testResults = [1, 2, 6, 8.9, 23, 26, 29];
 // const storedResults = testResults.slice(1, 2);
 // const storedResults = testResults.slice(3, 2); // will not because of reverse order
 // const storedResults = testResults.slice(-3, 2); // will not because both needs to be negatives
-const storedResults = testResults.slice(-3, -2); // this will select the elements from end of the array and go to specified index but excluding the specified index
+// const storedResults = testResults.slice(-3, -2); // this will select the elements from end of the array and go to specified index but excluding the specified index
+// testResults.push(3); // this not affected the storedResults array
+
+// console.log(storedResults, testResults);
+
+// concat method
+const testResults = [1, 2, 6, 8.9, 23, 26, 29];
+
+const storedResults = testResults.concat([24, 31]); // this will create brand new array and copies the existing array and it takes one or more array objects and this will not create nested array but it take the elements from arrays and it will add at the end of array
 testResults.push(3); // this not affected the storedResults array
 
 console.log(storedResults, testResults);
