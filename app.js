@@ -240,9 +240,20 @@ const prices = [100, 20, 40, 30, 10, 70, 50, 60, 80, 90];
 // );
 
 // the reduce will reduce the value in simpler method and this is shorter version of it.
-const sum = prices.reduce(
-  (previousValue, currentValue) => previousValue + currentValue,
-  0
-);
+// const sum = prices.reduce(
+//   (previousValue, currentValue) => previousValue + currentValue,
+//   0
+// );
 
-console.log(sum);
+// console.log(sum);
+
+// split() and join() method
+
+const data = 'India;Mumbai;421005';
+
+const transformedArray = data.split(';'); // To convert string into array
+console.log(transformedArray);
+
+const nameFragments = ['Nikhil', 'Kukreja'];
+const name = nameFragments.join(' '); // To convert array into string
+console.log(name);
