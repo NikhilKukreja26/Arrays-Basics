@@ -181,11 +181,41 @@
 // console.log(prices, taxAdjustedPrices);
 
 // filter() method
-const prices = [20, 30, 40, 20, 70, 80, 90];
+// const prices = [20, 30, 40, 20, 70, 80, 90];
 
-const filteredArray = prices.filter((price, index, prices) => {
-  return price > 20;
-  // filter using for filtering from array based on some condition
+// const filteredArray = prices.filter((price, index, prices) => {
+// return price > 20;
+// filter using for filtering from array based on some condition
+// });
+
+// console.log(filteredArray);
+
+// sort() and reverse() method
+// const prices = [100, 20, 40, 30, 10, 70, 50, 60, 80, 90];
+const prices = [5, 3, 2, 1, 4];
+
+const sortedPrices = prices.sort((a, b) => {
+  // here we are using three way comparison A<B or A>B or A=B
+  // if A<B then we return -1. else if A>B then we return 1. else 0 will be return if A and B both are equal.
+
+  // console.log(a, b);
+  // if (a > b) {
+  //   return 1;
+  // } else if (a === b) {
+  //   return 0;
+  // } else {
+  //   return -1;
+  // }
+
+  if (a < b) {
+    return -1;
+  } else if (a > b) {
+    return 1;
+  } else {
+    return 0;
+  }
 });
 
-console.log(filteredArray);
+console.log(sortedPrices);
+// Reversed Method
+console.log(sortedPrices.reverse());
