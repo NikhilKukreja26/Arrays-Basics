@@ -169,13 +169,23 @@
 
 // map() method
 
-const prices = [20, 30, 40, 20];
-const tax = 18;
+// const prices = [20, 30, 40, 20];
+// const tax = 18;
 
-const taxAdjustedPrices = prices.map((price, index, prices) => {
-  const priceObj = { index: index, taxAdjPrice: price * tax };
-  return priceObj;
-  // The JavaScript map() method is used to transform or modify the elements of an array by applying a provided function to each element. It then returns a new array containing the results of applying the function to each element of the original array.
+// const taxAdjustedPrices = prices.map((price, index, prices) => {
+//   const priceObj = { index: index, taxAdjPrice: price * tax };
+//   return priceObj;
+// The JavaScript map() method is used to transform or modify the elements of an array by applying a provided function to each element. It then returns a new array containing the results of applying the function to each element of the original array.
+// });
+
+// console.log(prices, taxAdjustedPrices);
+
+// filter() method
+const prices = [20, 30, 40, 20, 70, 80, 90];
+
+const filteredArray = prices.filter((price, index, prices) => {
+  return price > 20;
+  // filter using for filtering from array based on some condition
 });
 
-console.log(prices, taxAdjustedPrices);
+console.log(filteredArray);
