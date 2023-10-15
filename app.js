@@ -249,11 +249,44 @@ const prices = [100, 20, 40, 30, 10, 70, 50, 60, 80, 90];
 
 // split() and join() method
 
-const data = 'India;Mumbai;421005';
+// const data = 'India;Mumbai;421005';
 
-const transformedArray = data.split(';'); // To convert string into array
-console.log(transformedArray);
+// const transformedArray = data.split(';'); // To convert string into array
+// console.log(transformedArray);
 
+// spread operator
 const nameFragments = ['Nikhil', 'Kukreja'];
 const name = nameFragments.join(' '); // To convert array into string
 console.log(name);
+
+const copiedNameFragments = [...nameFragments]; // spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+nameFragments.push('Mr');
+console.log(nameFragments, copiedNameFragments);
+
+console.log(Math.min(...prices));
+
+nameFragments[0] = 'Akshay';
+
+console.log(nameFragments, copiedNameFragments);
+
+const persons = [
+  { name: 'John', age: 30 },
+  { name: 'Jane', age: 31 },
+];
+// const copiedPersons = [...persons];
+
+// const copiedPersons = persons.map((person) => ({
+//   name: person.name,
+//   age: person.age,
+// }));
+
+const copiedPersons = persons.map((person) => {
+  return {
+    name: person.name,
+    age: person.age,
+  };
+});
+
+persons.push({ name: 'Nikhil', age: 27 });
+persons[0].name = 'Max';
+console.log(persons, copiedPersons);
