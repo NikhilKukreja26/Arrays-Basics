@@ -255,24 +255,24 @@ const prices = [100, 20, 40, 30, 10, 70, 50, 60, 80, 90];
 // console.log(transformedArray);
 
 // spread operator
-const nameFragments = ['Nikhil', 'Kukreja'];
-const name = nameFragments.join(' '); // To convert array into string
-console.log(name);
+// const nameFragments = ['Nikhil', 'Kukreja'];
+// const name = nameFragments.join(' '); // To convert array into string
+// console.log(name);
 
-const copiedNameFragments = [...nameFragments]; // spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
-nameFragments.push('Mr');
-console.log(nameFragments, copiedNameFragments);
+// const copiedNameFragments = [...nameFragments]; // spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+// nameFragments.push('Mr');
+// console.log(nameFragments, copiedNameFragments);
 
-console.log(Math.min(...prices));
+// console.log(Math.min(...prices));
 
-nameFragments[0] = 'Akshay';
+// nameFragments[0] = 'Akshay';
 
-console.log(nameFragments, copiedNameFragments);
+// console.log(nameFragments, copiedNameFragments);
 
-const persons = [
-  { name: 'John', age: 30 },
-  { name: 'Jane', age: 31 },
-];
+// const persons = [
+//   { name: 'John', age: 30 },
+//   { name: 'Jane', age: 31 },
+// ];
 // const copiedPersons = [...persons];
 
 // const copiedPersons = persons.map((person) => ({
@@ -280,13 +280,24 @@ const persons = [
 //   age: person.age,
 // }));
 
-const copiedPersons = persons.map((person) => {
-  return {
-    name: person.name,
-    age: person.age,
-  };
-});
+// const copiedPersons = persons.map((person) => {
+//   return {
+//     name: person.name,
+//     age: person.age,
+//   };
+// });
 
-persons.push({ name: 'Nikhil', age: 27 });
-persons[0].name = 'Max';
-console.log(persons, copiedPersons);
+// persons.push({ name: 'Nikhil', age: 27 });
+// persons[0].name = 'Max';
+// console.log(persons, copiedPersons);
+
+const nameData = ['Nikhil', 'Kukreja', 'Mr', 27];
+
+const [firstName, lastName, ...otherInformation] = nameData; // Array Destructuring from w3 schools
+//To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
+
+// Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.
+
+// Destructuring makes it easy to extract only what is needed.
+
+console.log(firstName, lastName, otherInformation);
