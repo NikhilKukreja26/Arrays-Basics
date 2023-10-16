@@ -72,3 +72,17 @@ personData.forEach((value, key) => {
 // entries()	Returns an iterator object with the [key, value] pairs in a Map
 // keys()	Returns an iterator object with the keys in a Map
 // values()	Returns an iterator object of the values in a Map
+
+let person = { name: 'Maxi' };
+
+const persons = new WeakSet();
+
+persons.add(person);
+
+console.log(persons);
+
+// In JavaScript, a WeakSet is a collection of objects that stores only weakly held objects. WeakSet is similar to a Set, but it deletes objects when they become inaccessible. WeakSet has the following properties:
+// It cannot contain primitive type elements
+// It cleans up itself automatically
+// It does not support properties and methods that do not refer to all the keys or the count of them
+// It has a has() method that checks if a WeakSet object contains the specified object element
