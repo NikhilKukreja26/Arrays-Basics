@@ -291,13 +291,13 @@ const prices = [100, 20, 40, 30, 10, 70, 50, 60, 80, 90];
 // persons[0].name = 'Max';
 // console.log(persons, copiedPersons);
 
-const nameData = ['Nikhil', 'Kukreja', 'Mr', 27];
+// const nameData = ['Nikhil', 'Kukreja', 'Mr', 27];
 
-const [firstName, lastName, ...otherInformation] = nameData; // Array Destructuring from w3 schools
+// const [firstName, lastName, ...otherInformation] = nameData; // Array Destructuring from w3 schools
 //To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
 // Destructuring is exactly the same. We may have an array or object that we are working with, but we only need some of the items contained in these.
 
 // Destructuring makes it easy to extract only what is needed.
 
-console.log(firstName, lastName, otherInformation);
+// console.log(firstName, lastName, otherInformation);
